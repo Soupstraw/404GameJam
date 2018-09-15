@@ -5,6 +5,7 @@ using UnityEngine;
 public class Damagable : MonoBehaviour {
 
 	public float health = 100f;
+	public Damager.TeamEnum team;
 
 	// Use this for initialization
 	void Start () {
