@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65451698635751216}
   - component: {fileID: 114239827547892720}
   - component: {fileID: 114082209487989694}
+  - component: {fileID: 114011999340575146}
   m_Layer: 0
   m_Name: IceCube
   m_TagString: Untagged
@@ -98,6 +99,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114011999340575146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515116573816434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786626d706d894af7bc99c6f54b98cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114082209487989694
 MonoBehaviour:
   m_ObjectHideFlags: 1
