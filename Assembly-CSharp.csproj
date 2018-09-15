@@ -64,10 +64,13 @@
     <Compile Include="Assets\Scripts\BeelineAI.cs" />
     <Compile Include="Assets\Scripts\Damagable.cs" />
     <Compile Include="Assets\Scripts\Damager.cs" />
+    <Compile Include="Assets\Scripts\Fireball.cs" />
     <Compile Include="Assets\Scripts\IceCube.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ShootingController.cs" />
     <Compile Include="Assets\Scripts\UIHealthDisplay.cs" />
     <None Include="Assets\Nice Material Pack\Shaders\Ice.shader" />
     <None Include="Assets\Nice Material Pack\Shaders\Snow.shader" />
