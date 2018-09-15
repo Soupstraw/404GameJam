@@ -829,7 +829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 1685917251397004, guid: a18fd0c5f837d427381e6624484ae9d6,
     type: 2}
-  cooldown: 0.025
+  cooldown: 0.05
   gunTransform: {fileID: 110167055}
 --- !u!114 &1338293090
 MonoBehaviour:
