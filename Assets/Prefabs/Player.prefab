@@ -56,8 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210795964800858}
   - component: {fileID: 54991984139318906}
-  - component: {fileID: 65896259671717832}
-  - component: {fileID: 143520010348491798}
+  - component: {fileID: 135670854191922794}
   - component: {fileID: 114432449703488796}
   - component: {fileID: 114783121576949788}
   - component: {fileID: 114241351092295568}
@@ -208,18 +207,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &65896259671717832
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574969462540690}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65931373091594934
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -245,8 +232,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 1685917251397004, guid: a18fd0c5f837d427381e6624484ae9d6,
     type: 2}
-  cooldown: 0.2
-  gunTransform: {fileID: 4210795964800858}
+  cooldown: 0.05
+  gunTransform: {fileID: 4046432043122768}
 --- !u!114 &114432449703488796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  speed: 6
+  playerRB: {fileID: 54991984139318906}
+  speed: 7
 --- !u!114 &114783121576949788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -273,6 +261,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   team: 0
+--- !u!135 &135670854191922794
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574969462540690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135858944709008082
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -284,21 +284,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!143 &143520010348491798
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1574969462540690}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}

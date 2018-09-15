@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetScale: 1
   maxHealth: 100
-  meltSpeed: 1
+  meltSpeed: 2.5
 --- !u!114 &114718266157874590
 MonoBehaviour:
   m_ObjectHideFlags: 1
