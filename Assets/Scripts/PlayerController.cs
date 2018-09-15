@@ -3,17 +3,11 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    CharacterController characterController;
-
     public Camera cam;
+    public Rigidbody playerRB;
     public float speed = 6.0f;
 
     private Vector3 moveDirection = Vector3.zero;
-
-    void Start()
-    {
-        characterController = GetComponent<CharacterController>();
-    }
 
     void Update()
     {
@@ -21,7 +15,7 @@ public class PlayerController : MonoBehaviour
         moveDirection *= speed;
 
         // move the character controller
-        characterController.Move(moveDirection * Time.deltaTime);
+        playerRB.MovePosition(playerRB.position + moveDirection * Time.deltaTime);
 
         // make the character look at the mouse position
         Vector3 playerScreenPos = cam.WorldToScreenPoint(transform.position);
