@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour {
 	}
 
 	public void MoveTowards(Vector3 position){
-		transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * moveSpeed);
+		if(enabled)
+			transform.position = Vector3.MoveTowards(transform.position, position, Time.deltaTime * moveSpeed);
 	}
 }
