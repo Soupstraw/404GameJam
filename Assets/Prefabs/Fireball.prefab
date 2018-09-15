@@ -115,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 1
   speed: 10
+  startColor: {r: 0.5849056, g: 0.18211788, b: 0.12691347, a: 0}
+  endColor: {r: 1, g: 0.9514009, b: 0.3584906, a: 0}
 --- !u!114 &114817698666817528
 MonoBehaviour:
   m_ObjectHideFlags: 1
