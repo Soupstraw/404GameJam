@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
 
+    public Camera cam;
     public float speed = 6.0f;
 
     private Vector3 moveDirection = Vector3.zero;
@@ -21,5 +22,11 @@ public class PlayerController : MonoBehaviour
 
         // move the character controller
         characterController.Move(moveDirection * Time.deltaTime);
+
+        // make the character look at the mouse position
+        Vector3 playerScreenPos = cam.WorldToScreenPoint(transform.position);
+        Vector3 lookAtVector = Input.mousePosition - playerScreenPos;
+
+        transform.rotation = Quaternion.FromToRotation(Vector3.forward, new Vector3(lookAtVector.x,0, lookAtVector.y));
     }
 }

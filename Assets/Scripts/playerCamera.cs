@@ -2,22 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerCamera : MonoBehaviour {
+public class PlayerCamera : MonoBehaviour {
 
     public GameObject player;
-    private Vector3 offset;
-    public float smoothing = 5f; 
+    public float deadzone;
 
-	// Use this for initialization
-	void Start () {
+    private Camera cam;
+    private Vector3 offset;
+    
+	void Start ()
+    {
+        cam = GetComponent<Camera>();
+
         // Calculate the initial offset.
         offset = transform.position - player.transform.position;
-	}
-	
+    }
+
     void LateUpdate()
     {
-        transform.position = player.transform.position + offset;
-        Vector3 targetCamPos = transform.position;
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+        // get the screen mouse position
+        Vector3 playerScreenPos = cam.WorldToScreenPoint(player.transform.position);
+        Vector3 lookAtVector = Input.mousePosition - playerScreenPos;
+
+        // set the camera position to be between the mouse and player
+        transform.position = player.transform.position + offset + 
+            new Vector3(
+                lookAtVector.x / deadzone, 0, lookAtVector.y / deadzone);
     }
 }
