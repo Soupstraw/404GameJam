@@ -5,6 +5,7 @@ using UnityEngine;
 public class Damagable : MonoBehaviour {
 
 	public float health = 100f;
+	public Damager.TeamEnum team;
 
 	public void DealDamage(float damage){
 		health -= damage;
