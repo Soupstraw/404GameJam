@@ -15,6 +15,16 @@ public class Damagable : MonoBehaviour {
 	}
 
 	void Die(){
+        if (team == Damager.TeamEnum.ENEMY)
+        {
+            ScoreCounter.score++;
+        }
+
+        if (team == Damager.TeamEnum.PLAYER)
+        {
+            GameOverScript.gameOver = true;
+        }
+
 		GameObject.Destroy(gameObject);
 	}
 }
