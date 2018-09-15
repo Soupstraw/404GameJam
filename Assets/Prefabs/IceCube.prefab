@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114011999340575146}
   - component: {fileID: 54935982851577058}
   - component: {fileID: 114718266157874590}
+  - component: {fileID: 114688873811623092}
   m_Layer: 0
   m_Name: IceCube
   m_TagString: Untagged
@@ -154,6 +155,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+--- !u!114 &114688873811623092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515116573816434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2fb01c1443e495780a9c443126289b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScale: 1
+  maxHealth: 100
+  meltSpeed: 1
 --- !u!114 &114718266157874590
 MonoBehaviour:
   m_ObjectHideFlags: 1
