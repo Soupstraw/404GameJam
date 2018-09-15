@@ -5,14 +5,15 @@ using UnityEngine;
 public class Fireball : MonoBehaviour {
 	
 	public float lifetime = 2f;
-	public float speed = 1f;
+	public float speed = 5f;
 
 	private float age = 0.001f;
 
 	void Start(){
+        // randomize the fireball position a little bit
+        transform.position += new Vector3(Random.Range(-0.1f, 0.1f), 0, Random.Range(-0.1f, 0.1f));
 
 		transform.localScale = Vector3.one * age;
-		Debug.Log(transform.position);
 	}
 
 	// Update is called once per frame
@@ -25,6 +26,6 @@ public class Fireball : MonoBehaviour {
 		}
 
 		transform.localScale = Vector3.one * age;
-		transform.localPosition = transform.localPosition + Vector3.forward * speed * Time.deltaTime / (age + 1);
+		transform.localPosition = transform.localPosition + transform.forward * speed * Time.deltaTime / (age + 1);
 	}
 }
