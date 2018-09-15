@@ -15,11 +15,19 @@ public class Damager : MonoBehaviour {
 	public float damageAmount = 10f;
 	public TeamEnum team;
 
-	void OnCollisionEnter(Collision col){
-		Damagable damagable = col.collider.GetComponentInChildren<Damagable>();
+	private void DealDamage(Collider col){
+		Damagable damagable = col.GetComponentInChildren<Damagable>();
 		if(damagable != null && damagable.team != team){
 			damagable.DealDamage(damageAmount);
 			onDamageDealt.Invoke();
 		}
+	}
+
+	void OnCollisionEnter(Collision col){
+		DealDamage(col.collider);
+	}
+
+	void OnTriggerEnter(Collider col){
+		DealDamage(col);
 	}
 }
