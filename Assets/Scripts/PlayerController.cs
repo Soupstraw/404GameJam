@@ -3,22 +3,23 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    CharacterController characterController;
 
-    private Rigidbody playerRB;
+    public float speed = 6.0f;
+
+    private Vector3 moveDirection = Vector3.zero;
 
     void Start()
     {
-        playerRB = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        moveDirection *= speed;
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        playerRB.AddForce(movement * speed);
+        // move the character controller
+        characterController.Move(moveDirection * Time.deltaTime);
     }
 }

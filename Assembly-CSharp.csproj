@@ -60,9 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BeelineAI.cs" />
+    <Compile Include="Assets\Scripts\Damagable.cs" />
+    <Compile Include="Assets\Scripts\Damager.cs" />
     <Compile Include="Assets\Scripts\IceCube.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\UIHealthDisplay.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/Projects/Games/404GameJam/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
